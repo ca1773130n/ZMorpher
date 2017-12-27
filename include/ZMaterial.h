@@ -1,0 +1,19 @@
+﻿#pragma once
+
+//////////////////////////////////////////////////////////////////////////
+//
+// 머티리얼 클래스
+//
+//////////////////////////////////////////////////////////////////////////
+class ZMaterial : public D3DMATERIAL9
+{
+public:
+	D3DMATERIAL9			*min, *max;
+
+public:
+	ZMaterial( VOID );
+
+	VOID					SetValAll( D3DMATERIAL9* mat );
+	
+	VOID					Interpolate( FLOAT alpha );
+};
